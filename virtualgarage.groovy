@@ -201,7 +201,7 @@ def virtualgdstate = virtualgd.currentContact
     if (realgdstate == "open" && virtualgdstate == "closed")
      {
              log.debug "opening virtual door as it didnt close.. beam probably crossed"
-             mysend("Resetting Virtual Garage Door to Open as real door didn't close (beam probably crossed)!")   
+             mysend("The garage door didn't close properly.")   
              virtualgd.open()
     }   
 }
@@ -220,7 +220,7 @@ def virtualgdstate = virtualgd.currentContact
     if (realgdstate == "closed" && virtualgdstate == "open")
      {
              log.debug "opening virtual door as it didnt open.. track blocked?"
-             mysend("Resetting Virtual Garage Door to Closed as real door didn't open! (track blocked?)")   
+             mysend("The garage door didn't open properly.")   
              virtualgd.close()
     }   
 }
